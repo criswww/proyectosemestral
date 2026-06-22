@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codigo de clase - Asistencia Legitima</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', Arial, sans-serif; }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            background: #f5f5f5;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: white;
+            width: 420px;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .card h1 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #1f2937;
+        }
+
+        .card .instruccion {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 28px;
+        }
+
+        .campo {
+            width: 100%;
+            padding: 14px;
+            font-size: 22px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            text-align: center;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            outline: none;
+            margin-bottom: 16px;
+        }
+
+        .campo:focus {
+            border-color: #1f2937;
+        }
+
+        .btn-enviar {
+            width: 100%;
+            padding: 14px;
+            background: #1f2937;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-enviar:hover {
+            background: #111827;
+        }
+
+        .error {
+            margin-top: 16px;
+            padding: 12px;
+            background: #fee2e2;
+            color: #dc2626;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .info-usuario {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #9ca3af;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Clase online</h1>
+        <p class="instruccion">Ingresa el codigo que entrego el profesor durante la clase.</p>
+
+        <form method="POST" action="/asistir-online/{{ codigo }}">
+            <input type="text" name="codigo_clase" class="campo"
+                   placeholder="A123" maxlength="8" autofocus required>
+            <button type="submit" class="btn-enviar">Confirmar asistencia</button>
+        </form>
+
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+
+        <p class="info-usuario">{{ usuario }}</p>
+    </div>
+</body>
+</html>

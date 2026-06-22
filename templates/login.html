@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Asistencia Legitima</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="login-card">
+        <h1>Iniciar sesion</h1>
+        <p class="subtitle">Correo y contrasena</p>
+
+        <form method="POST" action="/">
+            <div class="form-group">
+                <label for="email">Correo electronico</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="usuario@ulagos.cl"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="password">Contrasena</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="contrasena"
+                    required
+                >
+            </div>
+
+            <button type="submit">Ingresar</button>
+        </form>
+
+        {% if message %}
+        <p class="message message-{{ message_color }}">{{ message }}</p>
+        {% endif %}
+
+        <div class="forgot-password">
+            <form method="POST" action="/forgot-password">
+                <button type="submit" class="link-button">Olvide mi contrasena</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

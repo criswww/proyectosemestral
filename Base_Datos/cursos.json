@@ -1,0 +1,13 @@
+[
+    {
+        "id": 1,
+        "carrera": "ingenieria civil en informatica",
+        "seccion": 1
+    },
+
+    {
+        "id": 2,
+        "carrera": "ingenieria civil en informatica",
+        "seccion": 2
+    }
+]

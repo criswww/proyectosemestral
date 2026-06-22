@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "asignatura_id": 1,
+        "fecha": "",
+        "hora_inicio": "",
+        "hora_fin": "",
+        "qr_activo": true
+    }, 
+
+    {
+        "id": 2,
+        "asignatura_id": 2,
+        "fecha": "",
+        "hora_inicio": "",
+        "hora_fin": "",
+        "qr_activo": true
+    }, 
+    
+    {
+        "id": 3,
+        "asignatura_id": 2,
+        "fecha": "",
+        "hora_inicio": "",
+        "hora_fin": "",
+        "qr_activo": true
+    }, 
+    
+    {
+        "id": 4,
+        "asignatura_id": 3,
+        "fecha": "",
+        "hora_inicio": "",
+        "hora_fin": "",
+        "qr_activo": true
+    }
+]

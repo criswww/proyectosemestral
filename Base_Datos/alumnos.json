@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "nombre": "Carlos",
+        "apellido": "Mora",
+        "rut": "12345678-9",
+        "correo": "estudiante@ulagos.cl",
+        "curso_id": "1",
+        "activo": true
+    },
+    {
+        "id": 2,
+        "nombre": "Ana",
+        "apellido": "Rios",
+        "rut": "98765432-1",
+        "correo": "ana.rios@ulagos.cl",
+        "curso_id": "1",
+        "activo": true
+    },
+    {
+        "id": 3,
+        "nombre": "Pedro",
+        "apellido": "Vega",
+        "rut": "11223344-5",
+        "correo": "pedro.vega@ulagos.cl",
+        "curso_id": "1",
+        "activo": true
+    }
+]

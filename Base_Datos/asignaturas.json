@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "nombre": "",
+        "profesor_id": 1
+    },
+
+    {
+        "id": 2,
+        "nombre": "",
+        "profesor_id": 2
+    },
+
+    {
+        "id": 3,
+        "nombre": "",
+        "profesor_id": 3
+    }
+]

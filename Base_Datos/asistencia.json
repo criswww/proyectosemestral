@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "correo_estudiante": "estudiante@ulagos.cl",
+        "clase_id": 1,
+        "modalidad": "online",
+        "hora": "2026-06-22 08:01:13"
+    },
+    {
+        "id": 2,
+        "correo_estudiante": "ana.rios@ulagos.cl",
+        "clase_id": 1,
+        "modalidad": "online",
+        "hora": "2026-06-22 08:07:57"
+    }
+]

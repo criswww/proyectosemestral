@@ -1,0 +1,123 @@
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #f3f4f6; /* gray-100 */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.login-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 384px; /* max-w-sm */
+    padding: 24px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db; /* gray-300 */
+}
+
+.login-card h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827; /* gray-900 */
+    margin: 0 0 8px 0;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #4b5563; /* gray-600 */
+    margin: 0 0 24px 0;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group:nth-of-type(2) {
+    margin-bottom: 24px;
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: #374151; /* gray-700 */
+    margin-bottom: 4px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    color: #111827;
+    background-color: #ffffff;
+    border: 1px solid #9ca3af; /* gray-400 */
+    border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 8px 0;
+    background-color: #1f2937; /* gray-800 */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #111827; /* gray-900 */
+}
+
+.message {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.message-green {
+    color: #16a34a;
+}
+
+.message-red {
+    color: #dc2626;
+}
+
+.message-gray {
+    color: #4b5563;
+}
+
+.forgot-password {
+    margin-top: 16px;
+    text-align: center;
+}
+
+button.link-button[type="submit"] {
+    width: auto;
+    background: none;
+    background-color: transparent;
+    border: none;
+    color: #4b5563;
+    font-size: 12px;
+    font-weight: normal;
+    cursor: pointer;
+    padding: 0;
+}
+
+button.link-button[type="submit"]:hover {
+    background-color: transparent;
+    text-decoration: underline;
+}
+.link-button:hover {
+    text-decoration: underline;
+}

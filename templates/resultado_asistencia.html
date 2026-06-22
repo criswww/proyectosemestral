@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado - Asistencia Legitima</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', Arial, sans-serif; }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            background: #f5f5f5;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: white;
+            width: 420px;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .card h1 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #1f2937;
+        }
+
+        .resultado {
+            padding: 16px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .resultado-green  { background: #dcfce7; color: #16a34a; }
+        .resultado-red    { background: #fee2e2; color: #dc2626; }
+        .resultado-orange { background: #ffedd5; color: #ea580c; }
+
+        .info {
+            font-size: 13px;
+            color: #6b7280;
+            margin-bottom: 25px;
+        }
+
+        .btn-panel {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #1f2937;
+            color: white;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .btn-panel:hover { background: #111827; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Registro de asistencia</h1>
+
+        <div class="resultado resultado-{{ color }}">
+            {{ mensaje }}
+        </div>
+
+        <p class="info">{{ usuario }}</p>
+
+        <a href="/panel" class="btn-panel">Ir al panel</a>
+    </div>
+</body>
+</html>

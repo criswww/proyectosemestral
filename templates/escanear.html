@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Asistencia - Asistencia Legítima</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', Arial, sans-serif; }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            background: #f5f5f5;
+        }
+
+        .sidebar {
+            width: 250px;
+            background: white;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .perfil { text-align: center; margin-bottom: 30px; }
+        .perfil-avatar {
+            width: 80px; height: 80px; border-radius: 50%;
+            background: #e5e7eb; display: flex; align-items: center;
+            justify-content: center; font-size: 28px; margin: 0 auto 10px;
+        }
+        .perfil h3 { margin-top: 10px; font-size: 15px; font-weight: 600; }
+        .perfil p { font-size: 13px; color: #6b7280; margin-top: 2px; }
+        .rol-badge {
+            display: inline-block; margin-top: 8px; padding: 3px 12px;
+            background: #1f2937; color: white; border-radius: 20px;
+            font-size: 12px; font-weight: 600; text-transform: capitalize;
+        }
+        .menu { list-style: none; }
+        .menu li { padding: 12px 15px; border-radius: 8px; margin-bottom: 5px; font-size: 14px; transition: 0.3s; }
+        .menu li:hover { background: #f0f0f0; }
+        .cerrar { color: red; cursor: pointer; }
+
+        .contenido {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: white;
+            width: 460px;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .card h1 { font-size: 22px; margin-bottom: 10px; }
+
+        .card .instruccion {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 30px;
+        }
+
+        .campo-codigo {
+            width: 100%;
+            padding: 14px;
+            font-size: 16px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+            letter-spacing: 2px;
+            outline: none;
+        }
+
+        .campo-codigo:focus {
+            border-color: #4A90E2;
+        }
+
+        .btn-registrar {
+            width: 100%;
+            padding: 14px;
+            background: #4A90E2;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-registrar:hover { background: #357ABD; }
+
+        .mensaje {
+            margin-top: 20px;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .mensaje-green  { background: #dcfce7; color: #16a34a; }
+        .mensaje-red    { background: #fee2e2; color: #dc2626; }
+        .mensaje-orange { background: #ffedd5; color: #ea580c; }
+
+        .btn-volver {
+            display: inline-block;
+            margin-top: 20px;
+            color: #6b7280;
+            font-size: 13px;
+            text-decoration: none;
+        }
+
+        .btn-volver:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <aside class="sidebar">
+        <div>
+            <div class="perfil">
+                <div class="perfil-avatar">👤</div>
+                <h3>{{ usuario }}</h3>
+                <p>{{ usuario }}</p>
+                <span class="rol-badge">{{ rol }}</span>
+            </div>
+            <ul class="menu">
+                <li>Inicio</li>
+                <li>Asignaturas</li>
+                <li>Asistencia</li>
+                <li>Importante</li>
+                <li>Configuración</li>
+            </ul>
+        </div>
+        <ul class="menu">
+            <li class="cerrar" onclick="window.location.href='/logout'">🚪 Cerrar sesión</li>
+        </ul>
+    </aside>
+
+    <main class="contenido">
+        <div class="card">
+            <h1>📷 Registrar Asistencia</h1>
+            <p class="instruccion">
+                Ingresa el código que aparece en el QR del profesor.<br>
+                Puedes copiarlo desde la imagen o escribirlo manualmente.
+            </p>
+
+            <form method="POST" action="/escanear">
+                <input
+                    type="text"
+                    name="codigo"
+                    class="campo-codigo"
+                    placeholder="Pega o escribe el código aquí"
+                    required
+                    autofocus
+                >
+                <button type="submit" class="btn-registrar">✔ Registrar asistencia</button>
+            </form>
+
+            {% if mensaje %}
+            <div class="mensaje mensaje-{{ color }}">
+                {{ mensaje }}
+            </div>
+            {% endif %}
+
+            <a href="/panel" class="btn-volver">← Volver al panel</a>
+        </div>
+    </main>
+</body>
+</html>
