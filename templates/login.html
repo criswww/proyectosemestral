@@ -2,17 +2,17 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Login - Asistencia Legitima</title>
+    <title>Login - Asistencia Legítima</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="login-card">
-        <h1>Iniciar sesion</h1>
-        <p class="subtitle">Correo y contrasena</p>
+        <h1>Iniciar sesión</h1>
+        <p class="subtitle">Correo y contraseña</p>
 
         <form method="POST" action="/">
             <div class="form-group">
-                <label for="email">Correo electronico</label>
+                <label for="email">Correo electrónico</label>
                 <input
                     type="email"
                     id="email"
@@ -23,12 +23,12 @@
             </div>
 
             <div class="form-group">
-                <label for="password">Contrasena</label>
+                <label for="password">Contraseña</label>
                 <input
                     type="password"
                     id="password"
                     name="password"
-                    placeholder="contrasena"
+                    placeholder="contraseña"
                     required
                 >
             </div>
@@ -42,7 +42,7 @@
 
         <div class="forgot-password">
             <form method="POST" action="/forgot-password">
-                <button type="submit" class="link-button">Olvide mi contrasena</button>
+                <button type="submit" class="link-button">Olvidé mi contraseña</button>
             </form>
         </div>
     </div>

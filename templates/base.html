@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel - Asistencia Legitima</title>
+    <title>Panel - Asistencia Legítima</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -16,13 +16,13 @@
         body {
             display: flex;
             min-height: 100vh;
-            background: #f5f5f5;
+            background: #f3f6fb;
         }
 
         .sidebar {
             width: 250px;
             background: white;
-            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+            box-shadow: 2px 0 14px rgba(0, 61, 166, 0.10);
             padding: 20px;
             display: flex;
             flex-direction: column;
@@ -64,7 +64,7 @@
             display: inline-block;
             margin-top: 8px;
             padding: 3px 12px;
-            background: #1f2937;
+            background: #003DA6;
             color: white;
             border-radius: 20px;
             font-size: 12px;
@@ -82,17 +82,18 @@
             border-radius: 8px;
             margin-bottom: 5px;
             font-size: 14px;
-            color: #1f2937;
+            color: #003DA6;
             text-decoration: none;
             transition: background 0.2s;
         }
 
         .menu li a:hover {
-            background: #f0f0f0;
+            background: rgba(0, 61, 166, 0.08);
         }
 
         .menu li a.activo {
-            background: #f0f0f0;
+            background: rgba(0, 61, 166, 0.10);
+            color: #003DA6;
             font-weight: 600;
         }
 
@@ -111,9 +112,9 @@
             background: white;
             width: 500px;
             padding: 40px;
-            border-radius: 15px;
+            border-radius: 16px;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 28px rgba(0, 61, 166, 0.10);
         }
 
         .card h1 {
@@ -151,12 +152,12 @@
         }
 
         .modalidad-selector input[type="radio"]:checked + label {
-            border-color: #1f2937;
-            color: #1f2937;
+            border-color: #003DA6;
+            color: #003DA6;
             background: #f9fafb;
         }
 
-        /* Campo codigo online */
+        /* Campo código online */
         .campo-online {
             display: none;
             margin-bottom: 20px;
@@ -175,7 +176,7 @@
         }
 
         .campo-online input:focus {
-            border-color: #1f2937;
+            border-color: #003DA6;
         }
 
         .campo-online label {
@@ -189,7 +190,7 @@
             width: 100%;
             padding: 16px;
             border: none;
-            background: #1f2937;
+            background: #003DA6;
             color: white;
             font-size: 16px;
             border-radius: 10px;
@@ -199,7 +200,7 @@
         }
 
         .btn-qr:hover {
-            background: #111827;
+            background: #002d7a;
         }
 
         .nota {
@@ -235,7 +236,7 @@
         </div>
 
         <ul class="menu">
-            <li class="cerrar"><a href="/logout">Cerrar sesion</a></li>
+            <li class="cerrar"><a href="/logout">Cerrar sesión</a></li>
         </ul>
     </aside>
 
@@ -257,7 +258,7 @@
 
                     <!-- Campo que aparece solo si elige online -->
                     <div class="campo-online" id="campo-codigo">
-                        <label for="codigo_clase">Codigo de clase</label>
+                        <label for="codigo_clase">Código de clase</label>
                         <input type="text" name="codigo_clase" id="codigo_clase"
                                placeholder="Ej: A123" maxlength="8">
                     </div>
@@ -265,13 +266,13 @@
                     <button type="submit" class="btn-qr">Generar QR</button>
                 </form>
             {% else %}
-                <p class="nota">Usa la camara de tu celular para escanear el QR que muestre el profesor.</p>
+                <p class="nota">Usa la cámara de tu celular para escanear el QR que muestre el profesor.</p>
             {% endif %}
         </div>
     </main>
 
     <script>
-        // Mostrar u ocultar el campo de codigo segun la modalidad elegida
+        // Mostrar u ocultar el campo de código según la modalidad elegida
         var radios = document.querySelectorAll('input[name="modalidad"]');
         var campoCodigo = document.getElementById('campo-codigo');
 

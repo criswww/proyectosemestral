@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Codigo de clase - Asistencia Legitima</title>
+    <title>Código de clase - Asistencia Legítima</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', Arial, sans-serif; }
@@ -11,7 +11,7 @@
         body {
             display: flex;
             min-height: 100vh;
-            background: #f5f5f5;
+            background: #f3f6fb;
             justify-content: center;
             align-items: center;
         }
@@ -20,15 +20,15 @@
             background: white;
             width: 420px;
             padding: 40px;
-            border-radius: 15px;
+            border-radius: 16px;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 28px rgba(0, 61, 166, 0.10);
         }
 
         .card h1 {
             font-size: 22px;
             margin-bottom: 10px;
-            color: #1f2937;
+            color: #003DA6;
         }
 
         .card .instruccion {
@@ -51,13 +51,13 @@
         }
 
         .campo:focus {
-            border-color: #1f2937;
+            border-color: #003DA6;
         }
 
         .btn-enviar {
             width: 100%;
             padding: 14px;
-            background: #1f2937;
+            background: #003DA6;
             color: white;
             border: none;
             border-radius: 8px;
@@ -68,7 +68,7 @@
         }
 
         .btn-enviar:hover {
-            background: #111827;
+            background: #002d7a;
         }
 
         .error {
@@ -91,7 +91,7 @@
 <body>
     <div class="card">
         <h1>Clase online</h1>
-        <p class="instruccion">Ingresa el codigo que entrego el profesor durante la clase.</p>
+        <p class="instruccion">Ingresa el código que entregó el profesor durante la clase.</p>
 
         <form method="POST" action="/asistir-online/{{ codigo }}">
             <input type="text" name="codigo_clase" class="campo"
